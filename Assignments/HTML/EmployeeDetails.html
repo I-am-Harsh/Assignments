@@ -1,106 +1,35 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Employee Details 
-        </title>
-        <style>
-            .heading {
-                text-decoration: underline;
-                text-align: center;
-            }
-            table,tr,td{
-                width: 400px;
-                text-align: center;
-                font-weight: bold;
-                border: 2px solid black;
-                background-color: cyan;
-            }
-            .none{
-                color: black;
-                text-align: left;
-                width: 400px;
-            }
-            td{
-                text-align: left;
-            }
-        </style>
-
+        <title>Table</title>
+    
     </head>
     <body>
-        <table>
+        <table border="1px" >
+           
             <tr>
-                <td>
-                    Name
-                </td>
-                <td>
-                    <input type="text" maxlength="20">
-                </td>
+            <th>Empcode</th>
+            <th>Emp Name</th>
+            <th>Dept Code</th>
+            <th>Experience</th>
             </tr>
             <tr>
-                <td>
-                    Employee Code
-                </td>
-                <td>
-                    <input type="number" maxlength="4">
-                </td>
+                <td>1001</td>
+                <td>Kiran Rao</td>
+                <td><a href="10.html">10</a></td>
+                <td>8 Yrs.</td>
             </tr>
             <tr>
-                <td>Department</td>
-                <td>
-                    <input type="radio" name='dept' value="admin"> Admin<br/>
-                    <input type="radio" name='dept' value="HR"> HR<br/>
-                    <input type="radio" name='dept' value="tech"> Technical<br/>
-                    <input type="radio" name='dept' value="Accounts"> Accounts<br/>    
-                </td>
+                <td>1002</td>
+                <td>Aamir Khan</td>
+                <td><a href="20.html">20</a></td>
+                <td>5 Yrs.</td>
             </tr>
             <tr>
-                <td>DOJ</td>
-                <td>
-                    <input type="date">
-                </td>
+                <td>1003</td>
+                <td>Ishita Shah</td>
+                <td><a href="30.html">30</a></td>
+                <td>10 Yrs.</td>
             </tr>
-            <tr>
-                <td>
-                    Address
-                </td>
-                <td>
-                    <textarea rows="8"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>Training Program Attended</td>    
-                <td>
-                    <input type="checkbox" value="HTML"> HTML <br/>
-                    <input type="checkbox" value="Java">Java<br/>
-                    <input type="checkbox" value=".net">.NET<br/>
-                    <input type="checkbox" value="Client/Server">Client/Server<br/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-
-                    Training needed to be Attended
-                </td>
-                <td>
-                    <select>
-                        <option value="js" selected>JavaScript</option>
-                        <option value="react">React</option>
-                        <option value="nodejs">NodeJS</option>
-                        <option value="firebase">Firebase</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Send the information at 
-                </td>
-                <td>
-                    <a href="mailto:rahul.vikash@capgemini.com">Rahul Vikash</a>
-                </td>
-            </tr>
-
-
         </table>
     </body>
 </html>
