@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Regex
+        </title>
+    </head>
+    <body>
+        <div>
+            Regex : 
+            <input type="text">
+
+        </div>
+        <br/>
+        <div>
+            Subject String : 
+            <input type="text">
+        </div>
+        <br/>
+        <div>
+            <input type="button" value="Test Match" onclick="test()">
+            <input type="button" value="Show Match" onclick="disp()">
+
+        </div>
+
+
+        <script>
+            var regex = document.getElementsByTagName('input')[0].value;
+            var string = document.getElementsByTagName('input')[1].value;
+
+            test = () => {
+                string.match(regex) ? alert('succesfull match') : alert("didn't match lol ");
+                
+            }
+
+            disp = () => {
+                console.log(string.search(regex))
+            }
+
+        </script>
+    </body>
+</html>
