@@ -24,6 +24,14 @@
             td{
                 text-align: left;
             }
+            tr td:first-child::after {
+                content:" *";
+                color: red;
+            }
+            tr:last-child td:first-child::after{
+                content: '';
+                color : white;
+            }
         </style>
 
     </head>
@@ -43,7 +51,7 @@
                         Password
                     </td>
                     <td>
-                        <input type="password" >
+                        <input type="password" required>
                     </td>
                 </tr>
                 <tr>
@@ -51,20 +59,20 @@
                         Phone Number
                     </td>
                     <td>
-                        <input type="number">
+                        <input type="number" required>
                     </td>
                 </tr>
                 <tr>
                     <td>Gender</td>
                     <td>
-                        <input type="radio" name='gender' value="Male"> Male
-                        <input type="radio" name='gender' value="Female"> Female    
+                        <input type="radio" name='gender' value="Male" required> Male
+                        <input type="radio" name='gender' value="Female" required> Female    
                     </td>
                 </tr>
                 <tr>
                     <td>DOB</td>
                     <td>
-                        <input type="date">
+                        <input type="date" required>
                     </td>
                 </tr>
                 <tr>
@@ -73,7 +81,7 @@
                         Email 
                     </td>
                     <td>
-                        <input type="email">
+                        <input type="email" required>
                     </td>
                 </tr>
                 <tr>
