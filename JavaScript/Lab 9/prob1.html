@@ -7,35 +7,47 @@
         </title>
     </head>
     <body>
-        <div>
+        
             Regex : 
-            <input type="text">
+            <input type="text" id="reg">
 
-        </div>
+       
         <br/>
-        <div>
+        
             Subject String : 
-            <input type="text">
-        </div>
+            <input type="text" id="string">
+        
         <br/>
-        <div>
-            <input type="button" value="Test Match" onclick="test()">
+        
+            <input type="button" value="Test Match"  onclick="test()">
             <input type="button" value="Show Match" onclick="disp()">
 
-        </div>
+        
 
 
         <script>
-            var regex = document.getElementsByTagName('input')[0].value;
-            var string = document.getElementsByTagName('input')[1].value;
+            
+            
 
+
+
+            // console.log(globalString)
             test = () => {
-                string.match(regex) ? alert('succesfull match') : alert("didn't match lol ");
+                // globalReg = 
+                // globalString = 
+                var globalReg = document.getElementsByTagName('input')[0].value;
+                var globalString = document.getElementsByTagName('input')[1].value;
+                globalString.match(globalReg) ? alert('succesfull match') : alert("didn't match lol ");
+               
+
+
                 
             }
 
             disp = () => {
-                console.log(string.search(regex))
+                var globalReg = document.getElementsByTagName('input')[0].value;
+                var globalString = document.getElementsByTagName('input')[1].value;
+                ( globalString.search(globalReg) >= 0) ?  alert(`match at position ${globalString.search(globalReg)} `) : alert(`It did not match`);
             }
 
         </script>
