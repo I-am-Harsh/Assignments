@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <body onload="populate()" style="align-items: center; justify-content: center;">
+        <table >
+            <tr>
+                <td>
+
+                    <select id="present" size="10">
+                        <option>
+                            Choose an item
+                        </option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="moveRight()"> >> </button> <br/><br/>
+                    <button type="button" onclick="moveLeft()"> << </button>
+                </td>
+                <td>
+                    <select id="deleted" size="10">
+                        Choose an item
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+
+            present = ['item1','item2','item3','item4','item5'];
+            deleted = ['ele1','ele2','ele3','ele4','ele5'];
+            populate = () => {
+                
+                
+                var select1 = document.getElementById('present');
+                var select2 = document.getElementById('deleted');
+                select1.options.length = 0;
+                select2.options.length = 0;
+
+                for(var i = 0; i < present.length; i ++){
+                    var opt = present[i];
+                    if(opt != null){
+                        select1.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+                    }
+                    // var el = document.createElement('options');
+                    // el.textContent = pres;
+                    // el.value = pres;
+                    // console.log(el.textContent)
+                    // select1.appendChild(el);
+                    
+                }
+                for(var i = 0; i < deleted.length; i ++){
+                    var opt = deleted[i];
+                    if(opt != null){
+                        select2.innerHTML += "<option value=\"" + opt + "\">" + opt + "</option>";
+                    }
+                    // var el = document.createElement('options');
+                    // el.textContent = del;
+                    // el.value = del;
+                    // console.log(el.textContent)
+                    // select1.appendChild(el);
+                    
+                }
+            }
+
+            moveRight = () => {
+                var change = document.getElementsByTagName('select')[0].value;
+                console.log(change);
+
+                // present.pop(change);
+                delete present[present.indexOf(change)];
+                deleted.push(change);
+                // console.log(present);
+                // console.log(deleted);
+                populate();
+            }
+
+            moveLeft = () => {
+                var change = document.getElementsByTagName('select')[1].value;
+                delete deleted[deleted.indexOf(change)];
+                present.push(change);
+                populate();
+            }
+        </script>
+    </body>
+</html>
