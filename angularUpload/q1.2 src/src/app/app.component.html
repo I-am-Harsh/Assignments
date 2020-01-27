@@ -1,0 +1,20 @@
+<h1 style="text-align: center">{{heading}}</h1>
+<div>
+  <form style="text-align: center">
+    <span>Id:</span>
+    <input type="text" name="id" [(ngModel)]="id"><br><br>
+
+    <span>Name:</span>
+    <input type="text" name="name"  [(ngModel)]="name"><br><br>
+
+    <span>Salary:</span>
+    <input type="text" name="sal"  [(ngModel)]="sal"><br><br>
+
+    <span>Department:</span>
+    <input type="text" name="dept" [(ngModel)]="dept"><br><br>
+
+    <button class="btn btn-primary" type="submit" (click)="validate()">Add Employee</button>
+  </form>
+
+  <p style="text-align: center">{{id}} {{name}} {{sal}} {{dept}}</p>
+</div>
