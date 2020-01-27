@@ -1,0 +1,108 @@
+
+
+<div>
+  <h3>Add Employee</h3>
+  <table>
+    <tr>
+      <td>
+        ID
+      </td>
+      <td>
+        <input type="text" name="id" [(ngModel)]='id'>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Name
+      </td>
+      <td>
+        <input type="text" name="name" [(ngModel)] ='name'>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Salary
+      </td>
+      <td>
+        <input type="text" name="salary" [(ngModel)] ='salary'>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Department
+      </td>
+      <td>
+        <input type="text" name="dept" [(ngModel)]='dept'>
+      </td>
+    </tr>
+  </table>
+  <button type="button" on-click="add()">Add Employee</button>
+</div>
+
+
+
+<div>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Department</th>
+      <th colspan="2">Actions</th>
+    </tr>
+    <tr *ngFor = 'let emp of emp'>
+      <td  name ='uid'>{{emp.empId}}</td>
+      <td  name='uname'>{{emp.empName}}</td>
+      <td  name='usalary'>{{emp.empSalary}}</td>
+      <td  name='udept'>{{emp.empDept}}</td>
+      <td>
+
+        <input type="button" value="Update">
+      </td>
+      <td>
+        <input type="button" value="Delete">
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<div>
+  <h3>Update Employee</h3>
+  <table>
+    <tr>
+      <td>
+        ID
+      </td>
+      <td>
+        <input type="text" name="uid" [(ngModel)]='uid'>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Name
+      </td>
+      <td>
+        <input type="text" name="uname" [(ngModel)] ='uname'>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Salary
+      </td>
+      <td>
+        <input type="text" name="usalary" [(ngModel)] ='usalary'>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Department
+      </td>
+      <td>
+        <input type="text" name="udept" [(ngModel)]='udept'>
+      </td>
+    </tr>
+  </table>
+  <button type="button" on-click="add()">Update Employee</button>
+</div>
