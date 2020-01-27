@@ -1,0 +1,58 @@
+
+<div class="container">
+  <form class="form-group" style="margin: 20px;" [formGroup]="myform">
+    Product Id:
+    <input type="text" class="form-control" required maxlength="30" minlength="2" formControlName="id" >  
+    Product Name:
+    <input type="text" class="form-control"  formControlName="name">
+     Product Cost:
+    <input type="text" class="form-control"  formControlName="cost"> 
+    Product Online:
+    <input type="radio" value="Yes" name="radioControl" formControlName="radioControl">Yes
+    <input type="radio" value="No" name="radioControl" formControlName="radioControl">No
+    <br>
+    <span>Product Category:
+      <select name="Category" class="form-control">
+        <!-- <option value="Grocery">Grocery</option>
+        <option value="Cloth">Cloth</option>
+        <option value="Electonics">Electonics</option>
+        <option value="Mobile">Mobile</option> -->
+        <option *ngFor="let g of category" [value]="g">
+          {{g}}
+        </option>
+      </select>
+    </span>
+    <br>
+    <span>
+      Availabe in stores:
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="BigBazaar">
+        <label class="form-check-label" for="BigBazaar">
+          Big Bazaar
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="D Mart">
+        <label class="form-check-label" for="D Mart">
+          D Mart
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="Alliance">
+        <label class="form-check-label" for="Alliance">
+          Alliance
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="MagaStore">
+        <label class="form-check-label" for="MagaStore">
+          Mega Store
+        </label>
+      </div>
+    </span>
+    <button (click)="validate()">Add Product</button>
+  </form>
+  <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger">yes</div> -->
+    <pre>{{myform.value | json}}</pre>
+</div>
