@@ -1,0 +1,80 @@
+<p>Ques 2</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div style="margin: auto">
+    <h3>Add employee</h3>
+    <table>
+      <tr>
+        <td>Id:</td>
+        <td><input type="text" name="id" id="id" [(ngModel)]="id" ng-required='true'></td>
+      </tr>
+      <tr>
+          <td>Name:</td> 
+          <td><input type="text" name="name" id="name" [(ngModel)]="name" required></td>
+      </tr>
+      <tr>
+          <td>Salary:</td>
+          <td><input type="text" name="salary" id="salary" [(ngModel)]="salary" required></td>
+      </tr>
+      <tr>
+          <td>Department:</td>
+          <td><input type="text" name="department" id="department" [(ngModel)]="department" required></td>
+      </tr>
+      <tr>
+        <input type="button" class="btn btn-warning" value="submit" (click)="validate()">
+      </tr>
+    </table>
+  </div>
+  <br>
+  <table class="table table-bordered" >
+    <tr>
+    <th (click)="sortid()">Id:</th>
+    <th (click)="sortname()">Name</th>
+    <th (click)="sortsal()">Salary:</th>
+    <th (click)="sortdept()">Department:</th>
+  <th></th>
+<th></th></tr>
+    <tr *ngFor="let user of emp">
+      <td>{{user.empId}}</td>
+      <td>{{user.empName}}</td>
+      <td>{{user.empSal}}</td>
+      <td>{{user.empDep}}</td>
+      <td>{{user.empjoiningdate}}</td>
+          <td><input type="button" value="delete" class="btn btn-danger" (click)="delete(user)"></td>
+          <td><input type="button" value="update" class="btn btn-primary" (click)="update(user)"></td>
+    </tr>
+  </table>
+  <br>
+  <h2>Update Employee</h2>
+  <div style="margin: auto">
+      <table>
+        <tr>
+          <td>Id:</td>
+          <td><input type="text" name="id" id="id1" [(ngModel)]="id1" ng-required='true'></td>
+        </tr>
+        <tr>
+            <td>Name:</td> 
+            <td><input type="text" name="name" id="name1" [(ngModel)]="name1" required></td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td><input type="text" name="salary" id="salary1" [(ngModel)]="salary1" required></td>
+        </tr>
+        <tr>
+            <td>Department:</td>
+            <td><input type="text" name="department" id="department1" [(ngModel)]="department1" required></td>
+        </tr>
+        <tr>
+            <input type="button" class="btn btn-warning" value="submit" (click)="updated()">
+          </tr>
+      </table>
+    </div>
+</body>
+</html>
