@@ -1,0 +1,12 @@
+public class Fast  {
+    public String setFast(int f) {
+// Implement try-catch block to validate if the give fast value in not between 100 and 120 call fastexception by passing "FastException". else return "valid fast".
+
+    }
+}
+
+class FastException extends Exception {
+    public FastException(String s) {
+        // Call constructor of parent Exception
+    }
+}

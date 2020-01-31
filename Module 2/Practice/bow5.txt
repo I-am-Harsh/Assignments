@@ -1,0 +1,16 @@
+class product{
+// create 3 constructors as and 4 fields name,price,type,category
+product(name,price)
+product(name,price,type) --String, double, String
+product(price)
+have the logic in the constructors as
+if price is >100 and <200   category is "category-c"
+if price is >=1000 and <4000   category is "category-b"
+if price is >=4000   category is "category-a"
+if price is <50   category is "no category"
+}
+class Test{
+public static void main(String []args){
+
+}
+}

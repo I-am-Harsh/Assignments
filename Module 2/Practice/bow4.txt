@@ -1,0 +1,26 @@
+public class Dom {
+	public String checkValues(int n1,int n2,char operator) {
+		/*if operator is '*' and n1 =1 and n2=1
+		 *  throw MultipyException with message "this is multitly exception"
+		 *  if operator is '/' and  n2=0
+		 *  throw DivideException with message "this is divide exception"
+		 *  if operator is +,-,*,/ then
+		 *  call the method calc(n1,n2,operator) with double return type ,
+		 *  in which do arithmetic operations using switch
+		 *  if no exception is found return 
+		 *  no abnormality found and value of calc method
+		 */
+	}
+	public double calc(double d1,double d2, char operator) {
+		
+	}
+class MultipyException extends Exception{
+	MultipyException(String str){
+		// call super class constructor
+	}
+}
+class DivideException extends Exception{
+	DivideException(String str){
+		// call super class constructor
+	}
+}

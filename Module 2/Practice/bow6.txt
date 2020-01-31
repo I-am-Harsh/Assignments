@@ -1,0 +1,33 @@
+// given string as input - first 4 characters are alphanumeric followed by date of join. format must be 1st 2nd and 3rd chars are upper case alphabits 
+followed by dd/MM/yyyy eg:- ME4W02/12/2019
+class Dom{
+public boolean verifyLen(String str){
+// verify length , if length is 12 return true else false
+}
+public boolean verifyStrfirst4(String str){
+// verify 1st , 2nd, 4th chars are apphabits in Uppercase
+and 3rd is numeric if so return true else false
+}
+public boolean verifyYear(String str){
+// verify in given string the year must be in between 2000 and 2020 both years are inclusive if so return true else false.
+}
+public boolean verifyMonth(String str){
+// verify in given string the month must be in between 1 and 12 both months are inclusive if so return true else false.
+}
+public boolean verifyDay(String str){
+// verify in given string the day must be in between 1 and 31 both days are inclusive if so return true else false.
+}
+public boolean giveWithoutDate(String str){
+// verify in given string that the str much be in the valid format. if so return str without date.
+eg: ME4W
+}
+public boolean giveDate(String str){
+// verify in given string that the str much be in the valid format. if so return str with date only.
+eg:02/12/2019
+}
+}
+class Test{
+p s v main(String []args){
+
+}
+}

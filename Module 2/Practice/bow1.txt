@@ -1,0 +1,32 @@
+class Test{
+
+    private static TreeMap<String,String> data; 
+
+    public Test() {
+	// create object of treemap and add some sample data to the map
+    }
+
+    public String getingNumber( String name ) {
+	// for the given key as parameter. If the key is null return "null", if the key is not present return null, if the key is present return its value.
+    }
+    public boolean getingName(String number){
+	// for the given value as parameter. If the value is null return false, if the value is not present return false, if the value is present return true.
+    }
+
+
+    public boolean putingNumber( String name, String number ) {
+	// for the given key and value as parameter. If the key and value are null return false, else add both in the treemap and return true.
+    }
+
+    public TreeMap<String,String> printing() {
+	// return treemap
+    }
+
+}
+
+class Main{
+    public static void main(String[] args) {
+
+    }
+}
+

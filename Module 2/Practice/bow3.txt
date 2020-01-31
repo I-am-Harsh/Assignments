@@ -1,0 +1,23 @@
+class Temperature {
+  
+    public float returnFahrenheit(String str){
+	  // return the Fahrenheit part of the string str
+    } 
+    public float returnCelsius(String str){
+        // return the Celsius part of the string str
+    } 
+    public float calculateDiff(float height,float weight){
+       // Calculate and return the Difference as Fahrenheit-Celsius and return the value.
+    }
+    public String checkStatus(float diff){
+        // return "Good" if the diff value is in b/w 10-20  or "Bad" for the remaining values.
+    }
+}
+
+class Client{
+    public static void main(String[] args){
+// input temperature is given in this format only as string 68-45@11-58
+// assume this part is 68-45 => 68.45f
+// assume this part is 11-58 => 11.58c
+    }
+}
