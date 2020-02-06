@@ -1,5 +1,4 @@
 package Lab_3;
-import java.io.*;
 import java.util.Scanner; 
   
 class SecondSmallest 
@@ -38,6 +37,7 @@ class SecondSmallest
     { 
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
+        sc.close();
         int[] arr = new int[number];
         
         for(int i = 0 ; i < number; i++){
