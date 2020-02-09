@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;     
 
 
-public class Lab_6_5{
+public class Lab_6_6{
 
     // void getdate(String year,String month,String day){
 
@@ -23,7 +23,7 @@ public class Lab_6_5{
         // String year = sc.nextLine();
 
 
-        // sc.close();
+        sc.close();
         
 
     }
