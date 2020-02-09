@@ -14,11 +14,12 @@ public class Lab_3_2 {
             for(int j = number.length() - 1; j >= 0 ; j--){
                 reversed += number.charAt(j);  
             }
-            System.out.println(reversed);
             arr[i] = Integer.parseInt(reversed);
+            reversed = "";
         }
         
         Arrays.sort(arr);
+        System.out.println("Sorted array is -->");
         for(int i = 0 ; i < arr.length; i++){
             System.out.println(arr[i]);
         }
