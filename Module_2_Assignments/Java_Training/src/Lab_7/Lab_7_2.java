@@ -15,12 +15,12 @@ public class Lab_7_2{
         char arr[] = new char[number];
 
         for(int i = 0; i < number; i++){
-            arr[i] = sc.nextInt();
+            arr[i] = sc.next();
         }
         sc.close();
 
-        HashMap hMap = new HashMap<Character,Integer>();
+        HashMap<Character, Integer> hMap = new HashMap<Character,Integer>();
 
-        for()
+        // for()
     }
 }
