@@ -1,45 +1,46 @@
 package Lab_3;
+import java.security.spec.ECPublicKeySpec;
+import java.util.Scanner; 
 
-import java.util.Scanner;
-import java.util.Arrays;
-
-public class Lab_3_2 {
-    public static void getSorted(int arr[]){
-        
-        String number;
-        String reversed = "";
-        for(int i = 0; i < arr.length; i++){
-            int temp = arr[i];
-            number = Integer.toString(temp);
-            for(int j = number.length() - 1; j >= 0 ; j--){
-                reversed += number.charAt(j);  
-            }
-            arr[i] = Integer.parseInt(reversed);
-            reversed = "";
-        }
-        
-        Arrays.sort(arr);
-        System.out.println("Sorted array is -->");
-        for(int i = 0 ; i < arr.length; i++){
-            System.out.println(arr[i]);
-        }
-
-        // return arr;
-    }
-    public static void main(String args[]){
+public class Lab_3_2{
+    public static void main (String[] args) 
+    { 
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
-        int[] arr = new int[number];
+        
+        String[] arr = new String[number];
         
         for(int i = 0 ; i < number; i++){
-            arr[i] = sc.nextInt();
+            arr[i] = sc.next();
         }
-        getSorted(arr);
-        // int[] a = getSorted(arr);
-        // for(int i = 0 ; i < number; i++){
-        //     System.out.println(a[i]);
-        // }
-        // System.out.println(a.length);
+        int capital = 0;
+        if(number % 2 == 0){
+            capital = number / 2;
+        }
+        else{
+            capital = number / 2 + 1;
+        }
+        System.out.println("Capital : " + capital);
+
+        for(int i = 0; i < number; i++){
+            for(int j = i+1; j < number; j++){
+                if(arr[i].compareTo(arr[j]) > 0){
+                        System.out.println(i);
+                        String temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    System.out.println("y");
+                }
+            }
+        }
+        for(int i = 0; i < number; i++){
+            if(i < capital)
+                System.out.print(arr[i].toUpperCase() + " ");
+            else
+                System.out.print(arr[i] + " ");
+        }
+        
         sc.close();
-    }
-}
+         
+    } 
+} 

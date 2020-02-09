@@ -27,10 +27,7 @@ public class lab_1_4 {
 		
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
-
-		
         System.out.println(checkNumber(a));
-        
         sc.close();
 
 		 

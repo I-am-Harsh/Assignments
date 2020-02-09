@@ -16,6 +16,6 @@ public class Lab_6_6 {
         sc.close();
         Period diff = Period.between(pdate, now);
  
-     System.out.printf("\nDifference is %d years, %d months and %d days old\n\n", diff.getYears(), diff.getMonths(), diff.getDays());
+        System.out.printf("\nDifference is %d years, %d months and %d days old\n\n", diff.getYears(), diff.getMonths(), diff.getDays());
   }
 }
