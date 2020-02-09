@@ -29,5 +29,7 @@ public class Lab_7_2{
         }
 
         System.out.println(hMap);
+
+
     }
 }
