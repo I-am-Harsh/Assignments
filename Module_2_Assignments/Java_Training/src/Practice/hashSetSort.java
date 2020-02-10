@@ -1,0 +1,29 @@
+package Practice;
+import java.util.*; 
+  
+public class hashSetSort { 
+    public static void main(String args[]) 
+    { 
+        // Creating a HashSet 
+        HashSet<String> set = new HashSet<String>(); 
+  
+        // Adding elements into HashSet using add() 
+        set.add("geeks"); 
+        set.add("practice"); 
+        set.add("contribute"); 
+        set.add("ide"); 
+  
+        System.out.println("Original HashSet: "
+                           + set); 
+  
+        // Sorting HashSet using List 
+        List<String> list = new ArrayList<String>(set); 
+        Collections.sort(list); 
+  
+        // Print the sorted elements of the HashSet 
+        System.out.println("HashSet elements "
+                           + "in sorted order "
+                           + "using List: "
+                           + list); 
+    } 
+} 
